@@ -6,9 +6,9 @@
 node *search(node *phead){
     node *ptr=phead;
     element el;
-    printf("가수명 입력:");  scanf("%s", el.artist);
+    printf("곡명 입력:");  scanf("%s", el.song);
     while (ptr!=NULL){
-        if (!strcmp(ptr->data.artist, el.artist)) 
+        if (!strcmp(ptr->data.song, el.song)) 
             return ptr;
         ptr=ptr->next;
     }
