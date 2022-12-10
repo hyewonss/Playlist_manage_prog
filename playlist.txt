@@ -1,15 +1,9 @@
 1번
-가수:Blackpink
-곡:stay
-2번
-가수:2NE1
-곡:GoAway
-3번
 가수:KARA
 곡:PrettyGirl
-4번
+2번
 가수:TAEYEON
 곡:I
-5번
+3번
 가수:YOUNHA
 곡:비밀번호486
