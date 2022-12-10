@@ -78,7 +78,7 @@ int main(){
                 display(head);
                 break;
             case 5:
-                print(head,head2,compare);
+                print_e(head, head2, compare);
                 break;
             default:
                 writefile(head);

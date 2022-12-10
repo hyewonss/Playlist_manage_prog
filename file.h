@@ -16,5 +16,5 @@ node *search(node *phead);
 void delete(node **phead, node *remove);
 void display(node *head);
 void writefile(node *phead);
-node *compare(node *head11, node *head22);
-void print(node *p11, node *p22, node* (*func)(node*, node*));
+int compare(node *head1, node *head2);
+void print_e(node *head1, node *head2, int(*func)(node*, node*));

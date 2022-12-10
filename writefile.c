@@ -12,7 +12,7 @@ void writefile(node *phead){
         return ;
     else{
         while (ptr!=NULL){
-            fputc(i,fp); fputs("번\n", fp);
+            fputc(i,fp); fputs("\n", fp);
             fputs("가수:", fp); fputs(ptr->data.artist, fp); fputs("\n", fp);
             fputs("곡:", fp); fputs(ptr->data.song, fp); fputs("\n", fp);
             ptr=ptr->next;
