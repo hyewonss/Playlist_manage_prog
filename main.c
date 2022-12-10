@@ -5,7 +5,6 @@
 
 int main(){
     node *head=NULL;
-    node *head2=NULL;
     int num=0;
     int in=0;
     node *se;
@@ -51,7 +50,7 @@ int main(){
         printf("2. Delete\n");
         printf("3. Search by artist\n");
         printf("4. Print playlist & song number\n");
-        printf("5. Same song?\n");
+        printf("5. Same artist?\n");
         printf("6. Exit\n");
         printf("Choose:");
         scanf("%d", &num);
@@ -78,7 +77,7 @@ int main(){
                 display(head);
                 break;
             case 5:
-                print_e(head, head2, compare);
+                print_e(head,compare);
                 break;
             default:
                 writefile(head);
