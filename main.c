@@ -7,8 +7,6 @@ int main(){
     node *head=NULL;
     int num=0;
     int in=0;
-    node *ss;
-    node *sa;
     int i=0;
 
     FILE *fp=fopen("playlist.txt", "rt");
@@ -65,26 +63,10 @@ int main(){
                 delete(&head, search(head));
                 break;
             case 3:
-                ss=search_s(head);
-                if (ss!=NULL){
-                    printf("가수명: %s ", ss->data.artist);
-                    printf("곡명: %s\n", ss->data.song);
-                }
-                else{
-                    printf("NONE");
-                    printf("\n");
-                }
+                search_s(head);
                 break;
             case 4:
-                sa=search_a(head);
-                if (sa!=NULL){
-                    printf("가수명: %s ", sa->data.artist);
-                    printf("곡명: %s\n", sa->data.song);
-                }
-                else{
-                    printf("NONE");
-                    printf("\n");
-                }
+                search_a(head);
                 break;
             case 5:
                 display(head);
