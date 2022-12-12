@@ -6,7 +6,6 @@
 int main(){
     node *head=NULL;
     int num=0;
-    int in=0;
     int i=0;
 
     FILE *fp=fopen("playlist.txt", "rt");
