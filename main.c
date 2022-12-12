@@ -7,7 +7,8 @@ int main(){
     node *head=NULL;
     int num=0;
     int in=0;
-    node *se;
+    node *ss;
+    node *sa;
     int i=0;
 
     FILE *fp=fopen("playlist.txt", "rt");
@@ -48,10 +49,11 @@ int main(){
         printf("******MENU******\n");
         printf("1. Insert\n");
         printf("2. Delete\n");
-        printf("3. Search by artist\n");
-        printf("4. Print playlist & song number\n");
-        printf("5. Same artist?\n");
-        printf("6. Exit\n");
+        printf("3. Search by song\n");
+        printf("4. Search by artist\n");
+        printf("5. Print playlist & song number\n");
+        printf("6. Same artist?\n");
+        printf("7. Exit\n");
         printf("Choose:");
         scanf("%d", &num);
 
@@ -63,10 +65,10 @@ int main(){
                 delete(&head, search(head));
                 break;
             case 3:
-                se=search(head);
-                if (se!=NULL){
-                    printf("가수명: %s ", se->data.artist);
-                    printf("곡명: %s\n", se->data.song);
+                ss=search_s(head);
+                if (ss!=NULL){
+                    printf("가수명: %s ", ss->data.artist);
+                    printf("곡명: %s\n", ss->data.song);
                 }
                 else{
                     printf("NONE");
@@ -74,16 +76,27 @@ int main(){
                 }
                 break;
             case 4:
-                display(head);
+                sa=search_a(head);
+                if (sa!=NULL){
+                    printf("가수명: %s ", sa->data.artist);
+                    printf("곡명: %s\n", sa->data.song);
+                }
+                else{
+                    printf("NONE");
+                    printf("\n");
+                }
                 break;
             case 5:
+                display(head);
+                break;
+            case 6:
                 print_e(head,compare);
                 break;
             default:
                 writefile(head);
                 break;
         }
-        if (num==6) break;
+        if (num==7) break;
     }
     return 0;
 }

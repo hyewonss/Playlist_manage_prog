@@ -14,6 +14,8 @@ char result1[30];
 node *createnode(void);
 void insert(node **phead, node *newnode);
 node *search(node *phead);
+node *search_s(node *phead);
+node *search_a(node *phead);
 void delete(node **phead, node *remove);
 void display(node *head);
 void writefile(node *phead);
