@@ -4,7 +4,7 @@
 #include <string.h>
 
 int main(){
-    node *head=NULL;
+    node *head=NULL;    //헤드포인터 선언
     int num=0;
     int i=0;
 
@@ -41,7 +41,8 @@ int main(){
         }
     }
     fclose(fp);
-
+/*파일의 내용에서 :를 이용해서 다음에 나오는 문자열을 artist, song에 차례대로 넣는다.
+만들어 놓은 새로운 노드에 artist, song을 입력시키고 이 새로운 노드로 연결리스트를 구성한다.*/
     while(1){
         printf("******MENU******\n");
         printf("1. Insert\n");
@@ -54,7 +55,7 @@ int main(){
         printf("Choose:");
         scanf("%d", &num);
 
-        switch (num){
+        switch (num){     //메뉴선택
             case 1:
                 insert(&head, createnode());
                 break;

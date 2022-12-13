@@ -6,7 +6,7 @@
 void writefile(node *phead){
     node *ptr=phead;
     int i='1';
-    FILE *fp=fopen("playlist.txt", "wt");
+    FILE *fp=fopen("playlist.txt", "wt");   //출력스트림 형성
 
     if (ptr==NULL)
         return ;

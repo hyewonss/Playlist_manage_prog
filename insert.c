@@ -11,11 +11,11 @@ void insert(node **phead, node *newnode){
         newnode->next=NULL;
     }
     else{
-        while (ptr!=NULL){
+        while (ptr!=NULL){  //마지막 노드의 주소값을 찾는 반복문
             p=ptr;
             ptr=ptr->next;
         }
         ptr=newnode;
-        p->next=ptr;
+        p->next=ptr;    //연결리스트의 끝에 newnode연결
     }
 }
